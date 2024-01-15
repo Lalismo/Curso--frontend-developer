@@ -28,3 +28,22 @@ Firefox -> Gecko
 3. Calcula las dimensiones de cada nodo y dónde va en la pantalla.
 4. Pinta las diferentes cajas.
 5. Las convierte en una imagen para mostrar en pantalla.
+
+
+## Anatomia de un documento HTML y sus elementos
+
+Elemento:
+```
+<h1>   -> Etiqueta de apertura
+Platzi -> Contenido
+</h1>  -> Etiqueta de cierre
+```
+Atributo:
+```
+<h1 class = "title">
+
+    |           |
+    v           v
+Atributo      Valor  
+```
+
