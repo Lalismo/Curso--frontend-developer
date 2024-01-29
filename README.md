@@ -102,4 +102,11 @@ Lo mejor es hacerlo por secciones cada una con sus respectivas etiquetas como lo
 
 ## Etiquetas HTML Más utilizadas
 
-
+Layout          Textos          Formularios     Enlaces     Imagenes & videos       Listas
+```                     
+* HEADER        * h1 ... h6     * Form          * a         * img                   * ul
+* NAV           * P             * Input                     * svg                   * li
+* SECTION                       * Label                     * iframe                * ol
+* ARTICLE                       * Button                    * video
+* FOOTER
+```
