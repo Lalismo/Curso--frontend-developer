@@ -240,3 +240,51 @@ Pseudoclases        Pseudoelementos
 * :hover             * ::first-letter
 * :nth-child(n)      * ::placeholder
 ```
+
+## Cascada y especifidad en CSS
+
+```
+C - Cascading
+S - Style
+S - Sheet
+```
+Cascada -> Significa que el orden de las reglas en css **importa**
+
+Ejemplo
+<h1>
+
+h1 {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
+La etiqueta <h1> tendrá un color blue de letra, esto porque está situado más abajo en el código. Esto ocurre con cada propiedad de CSS que se repita en algún punto más arriba del código.
+
+### Qué es especificidad en CSS
+
+La especificidad consiste en dar un valor a una recla CSS sobre **qué tan especifico es el estilo**, esto para que los navegadores puedan ssaber qué estilos aplicar sobre otros,
+independientemente de dónde se encuentren en el código. **El estilo se aplicará donde la especifidad sea mayor**
+
+### Tipos de especifidad en CSS
+
+Existen 6 tipos de especifidad con su respectivo valor, donde X es la cantidad de estilos que lo contienen.
+
+¿Cómo podemos saber qué reglas de CSS tienen mayor especificidad?
+```
+X o o o o | !important
+  X o o o | Estilos en línea
+    X o o | #ID
+      X o | Clases, atributos y pseudoclases
+        X | Elementos y pseudoelementos
+        o | Selector universal
+```
+
+### Regla con mayor especificidad
+
+La palabra reservada **!important** Es **un valor de toda propiedad CSS que provee una especificidad de 10000**, por lo que se aplicará ante otros estilos.
+
+##Tipos de display más utilizados: block, inline e inline-block
+
+Display: es el tipo de vizualización que tendran los elementos html en nuestra pagina
