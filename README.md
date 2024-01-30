@@ -85,6 +85,7 @@ se encuentra dentro de la etiqueta.
 Es una ayuda para hacer que nuestro HTML sea legible y este ordenado, también el solo hacer uso de div no es buena idea
 Lo mejor es hacerlo por secciones cada una con sus respectivas etiquetas como lo es header, ul, footer, etc.
 
+### Ejemplo en codigo
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,4 +111,132 @@ Layout          Textos          Formularios     Enlaces     Imagenes & videos   
 * SECTION                       * Label                     * iframe                * ol
 * ARTICLE                       * Button                    * video
 * FOOTER
+```
+
+## Anatomía de una declaración CSS: selectores, propiedades y valores
+
+Selector
+^      Propiedad 
+|      ^ 
+h1 {   | 
+    color: pink; -> Valor
+}
+
+## Tipos de selectores: básicos y combinados
+
+Selectores básicos
+```
+De tipo     -> div {...}
+
+De clase    -> .elemento {...}
+
+De id       -> #id(del elemento){...}
+
+De atributo -> a[href="..."] {...}
+
+Universal   -> *{...}
+```
+### Ejemplo en codigo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      background: papayawhip;
+    }
+    div {
+      background: pink;
+    }
+    .titulo {
+      color: blueviolet;
+    }
+    #titulo2 {
+      color: brown;
+    }
+    a[href="https://platzi.com/home"] {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo">Hola</div>
+  <div id="titulo2">mundo</div>
+  <a href="https://platzi.com/home">Platzi</a>
+</body>
+</html>
+
+Selectores combinados
+```
+Descendientes       -> div p
+
+Hijo directo        -> div > p
+
+Elemento adyacente  -> div + p
+
+General de hermanos -> div ~ p
+```
+
+### Ejemplo en codigo
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div p {
+      color: Lime;
+    }
+    div > div {
+      background: plum;
+    }
+    .es {
+      background: red;
+    }
+    div + section {
+      background: palevioletred;
+    }
+    div ~ p {
+      color: powderblue;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div>
+      <p>Platzi</p>
+      <div class="es">Es</div>
+    </div>
+  </div>
+  <p>Clase de selectores</p>
+  <p>Clase de selectores</p>
+  <section>
+    Es lo mejor
+  </section>
+  <div>
+    Master
+  </div>
+</body>
+</html>
+
+## Tipos de selectores: pseudoclases y pseudoelementos
+
+Pseudoclases: llegar a ciertas acciones que hace el usuario como por ejemplo al hacer clic al botón
+
+Pseudoelemento: Son aquellos que nos permiten acceder a elementos de html que no son accesibles con algunos tipos de selectores como ejemplo la primera letra de un texto o si se quiere agregar contenido antes o despues de un texto
+
+```
+Pseudoclases        Pseudoelementos
+
+* :active            * ::after
+* :focus             * ::before
+* :hover             * ::first-letter
+* :nth-child(n)      * ::placeholder
 ```
